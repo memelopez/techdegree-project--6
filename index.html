@@ -17,7 +17,7 @@
 <body>
     <div class="wrapper">
         <div class="videoContent">
-            <video style="width:100%;max-width: 100%" title="MediaElement">
+            <video style="width:100%;max-width: 100%;" title="MediaElement" preload="true">
                 <source src="video/video.mp4" type="video/mp4">
                 <source src="video/video.ogg" type="video/ogg">
                 <track label="English" kind="subtitles" srclang="en" src="captions.vtt" default />
@@ -99,8 +99,11 @@
     <script>
         $('video').mediaelementplayer({
           // controls feats and in what order
-          features: ['playpause', 'fullscreen', 'volume', 'progress', 'duration'],
-          startLanguage: 'en',
+        //   features: ['playpause', 'fullscreen', 'volume', 'progress', 'duration'],
+        //   startLanguage: 'en',
+        success: function(mediaElement, originalNode) {
+
+		}
         });
     </script>
     <script src="js/app.js"></script>
